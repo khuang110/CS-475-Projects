@@ -1,0 +1,7 @@
+﻿  animals.cpp
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project3\animals.cpp(119,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project3\animals.cpp(182,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project3\animals.cpp(183,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Source.cpp
+  Generating Code...
+  Project3.vcxproj -> C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project3\Debug\Project3.exe

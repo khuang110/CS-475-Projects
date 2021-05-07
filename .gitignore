@@ -1,0 +1,10 @@
+#Project 0
+/project\*0/project0/*.docx
+/project\*0/project0/*.pdf
+/project\*0/*.docx
+/project\*0/*.pdf
+/project\ 0/project0/project0/Debug
+/project\ 0/project0/project0/*.sln
+
+#Project 1
+

@@ -1,0 +1,5 @@
+﻿  simd.asm.cpp
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project4\simd.p5.h(7,10): fatal error C1083: Cannot open include file: 'resource.h': No such file or directory
+  Source.cpp
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project4\simd.p5.h(7,10): fatal error C1083: Cannot open include file: 'resource.h': No such file or directory
+  Generating Code...

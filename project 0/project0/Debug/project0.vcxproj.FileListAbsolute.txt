@@ -1,0 +1,2 @@
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\project0\Debug\project0.exe
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\project0\Debug\project0.pdb

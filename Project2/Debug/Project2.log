@@ -1,0 +1,9 @@
+﻿  main.cpp
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\main.cpp(66,16): warning C4244: 'initializing': conversion from 'int_fast64_t' to 'uint32_t', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\main.cpp(100,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\main.cpp(101,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\main.cpp(103,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\main.cpp(104,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\main.cpp(105,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\main.cpp(108,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Project2.vcxproj -> C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\Project2\Debug\Project2.exe

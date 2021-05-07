@@ -1,0 +1,7 @@
+﻿  project1.cpp
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\project 1\Project1\project1.cpp(37,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\project 1\Project1\project1.cpp(45,24): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\project 1\Project1\project1.cpp(98,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\project 1\Project1\project1.cpp(99,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\project 1\Project1\project1.cpp(115,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Project1.vcxproj -> C:\Users\kyle\Resilio Sync\kyle$\Oregon State Classes\CS 475 - Intro Parallel Programming\projects\project 1\Project1\Debug\Project1.exe
