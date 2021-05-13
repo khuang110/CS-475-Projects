@@ -1,19 +1,31 @@
-#include <xmmintrin.h>
-#define SSE_WIDTH		4
+#include "simd.p5.h"
+
 
 void
 SimdMul(float* a, float* b, float* c, int len)
 {
 	int limit = (len / SSE_WIDTH) * SSE_WIDTH;
-	register float* pa = a;
-	register float* pb = b;
-	register float* pc = c;
+	__asm
+	(
+		".att_syntax\n\t"
+		"movq    -24(%rbp), %r8\n\t"		// a
+		"movq    -32(%rbp), %rcx\n\t"		// b
+		"movq    -40(%rbp), %rdx\n\t"		// c
+		);
+
 	for (int i = 0; i < limit; i += SSE_WIDTH)
 	{
-		_mm_storeu_ps(pc, _mm_mul_ps(_mm_loadu_ps(pa), _mm_loadu_ps(pb)));
-		pa += SSE_WIDTH;
-		pb += SSE_WIDTH;
-		pc += SSE_WIDTH;
+		__asm
+		(
+			".att_syntax\n\t"
+			"movups	(%r8), %xmm0\n\t"	// load the first sse register
+			"movups	(%rcx), %xmm1\n\t"	// load the second sse register
+			"mulps	%xmm1, %xmm0\n\t"	// do the multiply
+			"movups	%xmm0, (%rdx)\n\t"	// store the result
+			"addq $16, %r8\n\t"
+			"addq $16, %rcx\n\t"
+			"addq $16, %rdx\n\t"
+			);
 	}
 
 	for (int i = limit; i < len; i++)
@@ -23,22 +35,41 @@ SimdMul(float* a, float* b, float* c, int len)
 }
 
 
+
 float
 SimdMulSum(float* a, float* b, int len)
 {
 	float sum[4] = { 0., 0., 0., 0. };
 	int limit = (len / SSE_WIDTH) * SSE_WIDTH;
-	register float* pa = a;
-	register float* pb = b;
 
-	__m128 ss = _mm_loadu_ps(&sum[0]);
+	__asm
+	(
+		".att_syntax\n\t"
+		"movq    -40(%rbp), %r8\n\t"		// a
+		"movq    -48(%rbp), %rcx\n\t"		// b
+		"leaq    -32(%rbp), %rdx\n\t"		// &sum[0]
+		"movups	 (%rdx), %xmm2\n\t"		// 4 copies of 0. in xmm2
+		);
+
 	for (int i = 0; i < limit; i += SSE_WIDTH)
 	{
-		ss = _mm_add_ps(ss, _mm_mul_ps(_mm_loadu_ps(pa), _mm_loadu_ps(pb)));
-		pa += SSE_WIDTH;
-		pb += SSE_WIDTH;
+		__asm
+		(
+			".att_syntax\n\t"
+			"movups	(%r8), %xmm0\n\t"	// load the first sse register
+			"movups	(%rcx), %xmm1\n\t"	// load the second sse register
+			"mulps	%xmm1, %xmm0\n\t"	// do the multiply
+			"addps	%xmm0, %xmm2\n\t"	// do the add
+			"addq $16, %r8\n\t"
+			"addq $16, %rcx\n\t"
+			);
 	}
-	_mm_storeu_ps(&sum[0], ss);
+
+	__asm
+	(
+		".att_syntax\n\t"
+		"movups	 %xmm2, (%rdx)\n\t"	// copy the sums back to sum[ ]
+		);
 
 	for (int i = limit; i < len; i++)
 	{
